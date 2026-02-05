@@ -62,7 +62,7 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-    .links a {
+    .links .pill {
       border: 1px solid var(--line);
       background: #fff;
       color: var(--text);
@@ -76,6 +76,14 @@
       border-color: var(--brand);
       color: var(--brand);
       transform: translateY(-1px);
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: #f0f3f9;
     }
     section {
       margin-top: 22px;
@@ -136,6 +144,31 @@
     .list li {
       margin-bottom: 8px;
     }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    .muted {
+      color: var(--subtle);
+    }
+    .edu, .exp {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+    }
+    .edu:first-child, .exp:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+    .exp-section {
+      margin-top: 10px;
+    }
+    .exp-section h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
     footer {
       margin-top: 16px;
       color: var(--subtle);
@@ -158,58 +191,129 @@
 <body>
   <main class="container">
     <header class="hero">
-      <h1>曹梦杰</h1>
-      <p class="title">大模型评测运营 / 产品运营</p>
-      <p class="location">上海</p>
-      <p class="bio">北京交通大学企业管理硕士在读（2023.09-2026.06）。专注大模型评测与应用评测、数据体系建设与产品运营。</p>
-      <div class="links">
-        <a href="mailto:Carycmj@outlook.com">Email</a>
-        <a href="https://github.com/Carycmj" target="_blank" rel="noreferrer">GitHub</a>
-        
+      <div>
+        <h1>曹梦杰</h1>
+        <p class="title">产品运营</p>
+        <p class="location">上海</p>
+        <div class="links">
+          <span class="pill">(86) 177-6622-0062</span>
+          <span class="pill">Carycmj@outlook.com</span>
+          <span class="pill">上海</span>
+        </div>
       </div>
     </header>
 
     <section>
-      <h2>Skills</h2>
-      <div class="badges">
-        <span class="badge">大模型评测</span>
-<span class="badge">数据集建设</span>
-<span class="badge">指标体系设计</span>
-<span class="badge">数据分析</span>
-<span class="badge">Python / SQL</span>
-<span class="badge">A/B测试</span>
-<span class="badge">AI工具使用</span>
-      </div>
+      <h2>学历背景</h2>
+      <article class="edu">
+              <div class="row">
+                <h3>北京交通大学</h3>
+                <span class="muted">2023.09 - 2026.06</span>
+              </div>
+              <p class="muted">企业管理 硕士</p>
+              <p>核心课程：数据挖掘与商务智能、中级计量经济学、组织行为理论、战略管理等</p>
+            </article>
+<article class="edu">
+              <div class="row">
+                <h3>苏州大学</h3>
+                <span class="muted">2019.09 - 2023.06</span>
+              </div>
+              <p class="muted">管理学（辅修心理学） 本科</p>
+              <p>GPA: 3.8/4.0（前10%）；核心课程：高等数学、线性代数、运筹学、统计学、微观经济学、宏观经济学等；荣誉：优秀毕业生、三好学生、学习优秀奖学金、精神文明奖学金等</p>
+            </article>
     </section>
 
     <section>
-      <h2>Awards</h2>
+      <h2>实习经历</h2>
+      <article class="exp">
+              <div class="row">
+                <h3>美团</h3>
+                <span class="muted">2025.04 - 至今</span>
+              </div>
+              <div class="row">
+                <p class="muted">M17 大模型评测团队 评测运营</p>
+                <span class="muted">北京</span>
+              </div>
+              <div class="exp-section">
+                  <h4>开放问题评测</h4>
+                  <ul class="list">
+                    <li>评测框架：「背景目标」针对传统主观评测中个人偏好噪声大、稳定性低的行业痛点，旨在构建一套剥离个人偏好、基于群体共识的自动化评测体系；「行动&amp;结果」聚焦指令遵循、安全性、真实性等高共识维度，将评价标准拆解为细粒度的原子化指标，设计并落地“准入判定-基准定档-缺陷降档”的三级分层聚合框架，替代传统模糊打分逻辑，最终产出高置信度的绝对分指标及模型对战榜单。</li>
+<li>数据建设：「背景目标」为支撑评测框架，需构建一个覆盖真实分布、高难度且易达成共识的基准数据集；「行动&amp;结果」基于C端/B端头部高频需求，采用“高质量种子+场景化扩写”的作业模式，构建了覆盖中英文、多任务的2000+条高难度开放数据集；</li>
+<li>打分方案：「背景目标」为高效指导文本模型的快速、精准迭代，期望有一个对齐人类偏好、打分稳定的评估模型；「行动&amp;结果」采用“ModelEval初评 + Human-in-the-loop质检”的混合评估模式，自动化评估准确率超70%；产出的模型对战榜单与LMSYS Chatbot Arena的PLCC达到0.7+，成功支持LongCat系列模型的多轮迭代上线；</li>
+                  </ul>
+                </div><div class="exp-section">
+                  <h4>应用评测</h4>
+                  <ul class="list">
+                    <li>类目体系建设：「背景目标」面对高复杂度的C/B端需求，期望快速寻找高价值场景，指导评测开展；「行动&amp;结果」基于内外部调研，构建“行业/场景/任务”三级类目体系，定义代码、商品零售、金融等10大行业，并进行二级场景细分；同时参考Anthropic Economic Index百万数据聚类后的600+任务构建规划、创作、数据分析等8大任务；该体系成功指导了应用评测集V2.0/V2.1的数据分布均衡化。</li>
+<li>主客观数据集建设：「背景目标」针对早期评测集建设流程模糊、人工依赖度高的问题，期望通过SOP优化提升数据生产的透明度与数据质量；「行动&amp;结果」基于类目体系开展数据分布对齐，制定高区分度与真实性标准；重构数据建设SOP，覆盖“挖掘-打标-质检-校验”全链路，并引入LLM-as-a-Judge实现自动化预标注与分流质检，显著提升数据生产人效；最终交付应用评测集V2.0，定向补充150+条复杂工具调用（Function Call）客观题与200+条垂类行业主观题。</li>
+                  </ul>
+                </div>
+            </article>
+<article class="exp">
+              <div class="row">
+                <h3>理想</h3>
+                <span class="muted">2024.11 - 2025.02</span>
+              </div>
+              <div class="row">
+                <p class="muted">COE（专家中心） 绩效AI产品</p>
+                <span class="muted">北京</span>
+              </div>
+              <div class="exp-section">
+                  <h4>数据自动化</h4>
+                  <ul class="list">
+                    <li>「背景目标」针对绩效分析场景中数据源分散、重复劳动多的痛点，旨在重构数据处理流程，实现从清洗到可视化的全链路自动化分析，释放人力资源；「行动&amp;结果」基于Python构建端到端的数据处理Pipeline，打通飞书绩效与本地数据流，自动化完成清洗、50+核心指标逻辑运算及多维交叉验证，实现图表绘制与PPT报告的一键输出；将季度/年度分析周期由5天压缩至1天，显著降低人工操作误差。</li>
+                  </ul>
+                </div><div class="exp-section">
+                  <h4>销售AI Talent</h4>
+                  <ul class="list">
+                    <li>「背景目标」解决销售人才画像模糊、成长路径难以量化的痛点，期望构建数据驱动的金牌专家识别体系与能力评估模型，推动人才全生命周期管理的闭环落地；「行动&amp;结果」处理千万级业务流水值数据，并引入LLM对非结构化文本数据进行语义打标，构建覆盖销售专家“过往履历/基础素质/业务绩效”的全生命周期200+高维特征库；利用统计、聚类构建专家画像，基于随机森林、XGBoost等训练金牌专家预测模型，正确率（ACC）达80%+，同时引入SHAP值进行模型可解释性分析，输出关键影响因子以指导业务管理；基于低代码平台在3个月内完成从算法原型到销售AI Talent前端产品的搭建与测试，实现了从模型预测到业务决策辅助的闭环交付；</li>
+                  </ul>
+                </div>
+            </article>
+<article class="exp">
+              <div class="row">
+                <h3>京东</h3>
+                <span class="muted">2024.05 - 2024.08</span>
+              </div>
+              <div class="row">
+                <p class="muted">COE（专家中心） 数据运营</p>
+                <span class="muted">北京</span>
+              </div>
+              <div class="exp-section">
+                  <h4>数据运营</h4>
+                  <ul class="list">
+                    <li>「背景目标」子集团招聘需求大、人力有限，需快速利用数据帮助招聘团队提效，但数据繁杂、口径不一；期望快速搭建招聘数据中台，助力团队优化招聘流程。「行动&amp;结果」梳理招聘全流程数据，撰写指标说明书（含招聘结果、效率、进度、质量、合规与体验五方面指标），统一计算口径，拉齐各方对数据的认知；同时，利用内部招聘看板系统、PS系统及Excel等搭建数据看板，实现周度、月度、季度的数据自动化更新，帮助招聘团队阶段性复盘与优化；此外，By多级业务部、招聘人员、岗位以及时间等维度进行深入分析，挖掘各指标卡点并优化，最终助力招聘团队达成Q3核心业务指标。</li>
+                  </ul>
+                </div><div class="exp-section">
+                  <h4>资源管控与横向项目</h4>
+                  <ul class="list">
+                    <li>资源管控：招聘财务资源管控与预算，如招聘网络渠道费、差旅费、背调费、猎头费、校招费等；招聘信息资源支持，包括二次回流、绩效查询、简历信息修改等；招聘网络渠道资源支持，包括猎聘、BOSS、脉脉等的账号开通与分配。</li>
+<li>横向项目：内部招聘看板系统4.0试点落地、内推渠道建设、面评流程规范、候选人面试体验优化、入职人员背景分析等。</li>
+                  </ul>
+                </div>
+            </article>
+    </section>
+
+    <section>
+      <h2>竞赛活动</h2>
       <ul class="list">
-        <li>“正大杯”第十五届市场调查与分析大赛北京赛区（研究生组）一等奖（2025.01-2025.04）</li>
-<li>2024年“挑战杯”首都大学生创业计划竞赛北京市三等奖（2024.04-2024.05）</li>
+        <li>“正大杯”第十五届市场调查与分析大赛北京赛区（研究生组）一等奖（2025.01 - 2025.04）</li>
+<li>2024年“挑战杯”首都大学生创业计划竞赛北京市三等奖（2024.04 - 2024.05）</li>
 <li>第二届全国大学生数据统计与分析竞赛二等奖（2023.06）</li>
       </ul>
     </section>
 
     <section>
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-              <h3>美团 | 大模型评测运营</h3>
-              <p>构建开放问题评测框架、数据集与打分方案；推动应用评测类目体系与数据集建设。</p>
-              <a href="https://github.com/Carycmj/Carycmj.github.io" target="_blank" rel="noreferrer">View on GitHub</a>
-            </article>
-<article class="card">
-              <h3>理想 | 绩效AI产品</h3>
-              <p>搭建数据处理Pipeline与自动化分析；支持AI Talent能力评估与业务决策。</p>
-              <a href="https://github.com/Carycmj/Carycmj.github.io" target="_blank" rel="noreferrer">View on GitHub</a>
-            </article>
-<article class="card">
-              <h3>京东 | 数据运营</h3>
-              <p>搭建招聘数据口径与指标体系，推进数据自动化更新与流程优化。</p>
-              <a href="https://carycmj.github.io" target="_blank" rel="noreferrer">View on GitHub</a>
-            </article>
-      </div>
+      <h2>个人技能</h2>
+      <ul class="list">
+        <li>Python</li>
+<li>Js</li>
+<li>Sql</li>
+<li>Chatbot</li>
+<li>Cursor等AI工具</li>
+<li>MS Office国家二级</li>
+<li>英语（CET-6）</li>
+      </ul>
     </section>
 
     <footer>Built with Python + GitHub Pages</footer>
