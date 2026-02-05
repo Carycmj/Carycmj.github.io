@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mengjie Cao | Personal Homepage</title>
+  <style>
+    :root {
+      --bg: #f6f8ff;
+      --panel: #ffffff;
+      --text: #1b1f2a;
+      --subtle: #5d6475;
+      --brand: #104f8c;
+      --accent: #d7ecff;
+      --line: #dbe2ef;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, #e7f1ff 0%, transparent 38%),
+        radial-gradient(circle at 90% 20%, #eaf6ec 0%, transparent 34%),
+        var(--bg);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 56px 20px 72px;
+    }
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(16, 79, 140, 0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 6px;
+    }
+    .title {
+      color: var(--brand);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .location {
+      color: var(--subtle);
+      margin-bottom: 16px;
+    }
+    .bio {
+      margin-bottom: 18px;
+      max-width: 70ch;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .links a {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      transition: all 0.18s ease;
+    }
+    .links a:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+      transform: translateY(-1px);
+    }
+    section {
+      margin-top: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+    }
+    section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .badge {
+      background: var(--accent);
+      color: #0f3359;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      border: 1px solid #c6def8;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      background: #fff;
+    }
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .card p {
+      color: var(--subtle);
+      margin-bottom: 10px;
+      min-height: 3.2em;
+    }
+    .card a {
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 16px;
+      color: var(--subtle);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    @media (max-width: 740px) {
+      .container {
+        padding-top: 26px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Mengjie Cao</h1>
+      <p class="title">AI Product &amp; Evaluation</p>
+      <p class="location">Beijing / Remote</p>
+      <p class="bio">I build AI products and evaluation systems. I focus on turning model capabilities into stable user value.</p>
+      <div class="links">
+        <a href="mailto:your_email@example.com">Email</a>
+        <a href="https://github.com/your-github-id" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-id" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="badges">
+        <span class="badge">LLM evaluation</span>
+<span class="badge">Prompt engineering</span>
+<span class="badge">Data analysis</span>
+<span class="badge">Product operation</span>
+<span class="badge">Experiment design</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+              <h3>LLM Evaluation Dashboard</h3>
+              <p>Built a metric dashboard for model comparison and quality tracking.</p>
+              <a href="https://github.com/your-github-id/project-1" target="_blank" rel="noreferrer">View on GitHub</a>
+            </article>
+<article class="card">
+              <h3>Prompt Optimization Workflow</h3>
+              <p>Designed a prompt iteration workflow to improve consistency and accuracy.</p>
+              <a href="https://github.com/your-github-id/project-2" target="_blank" rel="noreferrer">View on GitHub</a>
+            </article>
+<article class="card">
+              <h3>Portfolio Site</h3>
+              <p>This personal website generated by a Python script.</p>
+              <a href="https://github.com/your-github-id/your-github-id.github.io" target="_blank" rel="noreferrer">View on GitHub</a>
+            </article>
+      </div>
+    </section>
+
+    <footer>Built with Python + GitHub Pages</footer>
+  </main>
+</body>
+</html>
