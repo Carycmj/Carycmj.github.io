@@ -1,240 +1,146 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>曹梦杰 | Personal Homepage</title>
+  <title>曹梦杰 (Cary) | Personal Homepage</title>
   <style>
     :root {
-      --bg: #f6f8ff;
+      --bg: #f8fafc;
       --panel: #ffffff;
-      --text: #1b1f2a;
-      --subtle: #5d6475;
-      --brand: #104f8c;
-      --accent: #d7ecff;
-      --line: #dbe2ef;
+      --text: #1e293b;
+      --subtle: #64748b;
+      --brand: #0f766e;
+      --accent: #ccfbf1;
+      --line: #e2e8f0;
+      --sidebar-w: 280px;
     }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: "Avenir Next", "Segoe UI", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 10% 0%, #e7f1ff 0%, transparent 38%),
-        radial-gradient(circle at 90% 20%, #eaf6ec 0%, transparent 34%),
-        var(--bg);
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 56px 20px 72px;
-    }
-    .hero {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(16, 79, 140, 0.08);
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 6px;
-    }
-    .title {
-      color: var(--brand);
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .location {
-      color: var(--subtle);
-      margin-bottom: 16px;
-    }
-    .bio {
-      margin-bottom: 18px;
-      max-width: 70ch;
-    }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .links .pill {
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--text);
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      transition: all 0.18s ease;
-    }
-    .links a:hover {
-      border-color: var(--brand);
-      color: var(--brand);
-      transform: translateY(-1px);
-    }
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 16px;
-      object-fit: cover;
-      border: 1px solid var(--line);
-      background: #f0f3f9;
-    }
-    section {
-      margin-top: 22px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 24px;
-    }
-    section h2 {
-      font-size: 1.2rem;
-      margin-bottom: 14px;
-    }
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .badge {
-      background: var(--accent);
-      color: #0f3359;
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      border: 1px solid #c6def8;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 16px;
-      background: #fff;
-    }
-    .card h3 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-    .card p {
-      color: var(--subtle);
-      margin-bottom: 10px;
-      min-height: 3.2em;
-    }
-    .card a {
-      color: var(--brand);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .card a:hover {
-      text-decoration: underline;
-    }
-    .list {
-      padding-left: 18px;
-      color: var(--subtle);
-    }
-    .list li {
-      margin-bottom: 8px;
-    }
-    .row {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items: baseline;
-    }
-    .muted {
-      color: var(--subtle);
-    }
-    .edu, .exp {
-      padding: 12px 0;
-      border-top: 1px solid var(--line);
-    }
-    .edu:first-child, .exp:first-child {
-      border-top: none;
-      padding-top: 0;
-    }
-    .exp-section {
-      margin-top: 10px;
-    }
-    .exp-section h4 {
-      font-size: 1rem;
-      margin-bottom: 6px;
-    }
-    footer {
-      margin-top: 16px;
-      color: var(--subtle);
-      font-size: 0.9rem;
-      text-align: center;
-    }
-    @media (max-width: 740px) {
-      .container {
-        padding-top: 26px;
-      }
-      h1 {
-        font-size: 1.6rem;
-      }
-      .grid {
-        grid-template-columns: 1fr;
-      }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; }
+    body { font-family: "Times New Roman", "楷体", "KaiTi", "STKaiti", serif; font-size: 1rem; color: var(--text); background: var(--bg); line-height: 1.7; }
+    .page { display: flex; min-height: 100vh; max-width: 1100px; margin: 0 auto; }
+    .sidebar { width: var(--sidebar-w); flex-shrink: 0; padding: 40px 24px; background: var(--panel); border-right: 1px solid var(--line); position: sticky; top: 0; height: 100vh; }
+    .avatar-wrap { width: 140px; height: 140px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; border: 3px solid var(--line); box-shadow: 0 4px 20px rgba(15, 118, 110, 0.12); }
+    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .sidebar h1 { font-size: 1.4rem; font-weight: 700; text-align: center; margin-bottom: 6px; color: var(--text); }
+    .sidebar .title { color: var(--brand); font-weight: 600; font-size: 0.95rem; text-align: center; margin-bottom: 20px; }
+    .contact-list { list-style: none; padding: 0; }
+    .contact-list li { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 0.9rem; color: var(--subtle); }
+    .contact-list .icon { width: 18px; text-align: center; font-size: 1rem; flex-shrink: 0; }
+    .contact-list a { color: var(--brand); text-decoration: none; }
+    .contact-list a:hover { text-decoration: underline; }
+    .main { flex: 1; padding: 40px 48px 60px; min-width: 0; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-size: 1.15rem; font-weight: 600; margin-bottom: 16px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .section-title .emoji { font-size: 1.2rem; }
+    .about-text { color: var(--subtle); font-size: 0.98rem; line-height: 1.8; }
+    .edu, .exp { padding: 16px 0; border-top: 1px solid var(--line); }
+    .edu:first-child, .exp:first-child { border-top: none; padding-top: 0; }
+    .edu-details .edu-list { margin-top: 4px; }
+    .edu-details .edu-list li { margin-bottom: 6px; color: var(--subtle); font-size: 0.92rem; }
+    .award { padding: 12px 0; border-top: 1px solid var(--line); }
+    .award:first-child { border-top: none; padding-top: 0; }
+    .exp.collapsible { padding: 12px 0; }
+    .exp-header { width: 100%; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; text-align: left; background: none; border: none; cursor: pointer; font: inherit; color: inherit; padding: 4px 0; }
+    .exp-header:hover { opacity: 0.85; }
+    .exp-header-inner { flex: 1; min-width: 0; }
+    .toggle-icon { flex-shrink: 0; color: var(--brand); font-size: 0.85rem; transition: transform 0.2s; }
+    .exp-header[aria-expanded="true"] .toggle-icon { transform: rotate(90deg); }
+    .exp-body { padding-top: 12px; padding-left: 0; }
+    .row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+    .exp-org { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .org-logo { width: 32px; height: 32px; border-radius: 6px; object-fit: contain; flex-shrink: 0; background: #f1f5f9; }
+    .edu-school { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .school-logo { width: 32px; height: 32px; border-radius: 6px; object-fit: contain; flex-shrink: 0; background: #f1f5f9; }
+    .edu h3, .exp h3 { font-size: 1.05rem; color: var(--text); margin: 0; }
+    .muted { color: var(--subtle); font-size: 0.9rem; }
+    .exp-section { margin-top: 12px; }
+    .exp-section h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+    .list { padding-left: 20px; color: var(--subtle); font-size: 0.92rem; }
+    .list li { margin-bottom: 8px; line-height: 1.65; }
+    .skills-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-tag { background: var(--accent); color: #0d5c55; padding: 6px 14px; border-radius: 999px; font-size: 0.9rem; border: 1px solid #99f6e4; }
+    .ai-usage { display: flex; flex-direction: column; gap: 14px; }
+    .ai-item { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; background: #f8fafc; border-radius: 12px; border: 1px solid var(--line); }
+    .ai-item .ai-label { color: var(--brand); font-size: 0.95rem; font-weight: 600; }
+    .ai-item p { margin: 0; color: var(--subtle); font-size: 0.92rem; line-height: 1.6; text-align: left; }
+    footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--subtle); font-size: 0.85rem; text-align: center; }
+    @media (max-width: 860px) {
+      .page { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: static; padding: 32px 24px; border-right: none; border-bottom: 1px solid var(--line); }
+      .avatar-wrap { width: 120px; height: 120px; }
+      .main { padding: 32px 24px 48px; }
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <header class="hero">
-      <div>
-        <h1>曹梦杰</h1>
-        <p class="title">产品运营</p>
-        <p class="location">上海</p>
-        <div class="links">
-          <span class="pill">(86) 177-6622-0062</span>
-          <span class="pill">Carycmj@outlook.com</span>
-          <span class="pill">上海</span>
-        </div>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="avatar-wrap">
+        <img src="avatar.png" alt="曹梦杰 (Cary)" />
       </div>
-    </header>
-
-    <section>
-      <h2>学历背景</h2>
-      <article class="edu">
-              <div class="row">
-                <h3>北京交通大学</h3>
+      <h1>曹梦杰 (Cary)</h1>
+      <p class="title">AI产品运营</p>
+      <ul class="contact-list">
+        <li><span class="icon">📍</span> 江浙沪</li>
+        <li><span class="icon">✉️</span> <a href="mailto:Carycmj@outlook.com">Carycmj@outlook.com</a></li>
+        <li><span class="icon">📱</span> (86) 177-6622-0062</li>
+        <li><span class="icon">📕</span> <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener">小红书 @Cary</a></li>
+      </ul>
+    </aside>
+    <main class="main">
+      <section class="section">
+        <h2 class="section-title"><span class="emoji">✦</span> 关于我</h2>
+        <p class="about-text">你好，我是曹梦杰。目前在北京交通大学攻读企业管理硕士，专注于数据挖掘、商务智能与战略管理。曾在美团、理想、京东等公司实习，深耕大模型评测、数据运营与 AI 产品方向。热爱用数据驱动决策，也乐于探索 Cursor、Chatbot 等 AI 工具在业务中的落地。期待与志同道合的朋友交流。</p>
+      </section>
+      <section class="section">
+        <h2 class="section-title">学历背景</h2>
+        <article class="edu">
+              <div class="row edu-title-row">
+                <div class="edu-school">
+                  <img class="school-logo" src="logos/bjtu.png" alt="北京交通大学 logo" />
+                  <h3>北京交通大学</h3>
+                </div>
                 <span class="muted">2023.09 - 2026.06</span>
               </div>
               <p class="muted">企业管理 硕士</p>
-              <p>核心课程：数据挖掘与商务智能、中级计量经济学、组织行为理论、战略管理等</p>
+              <div class="edu-details"><ul class="list edu-list"><li>核心课程：数据挖掘与商务智能、中级计量经济学、组织行为理论、战略管理等</li></ul></div>
             </article>
 <article class="edu">
-              <div class="row">
-                <h3>苏州大学</h3>
+              <div class="row edu-title-row">
+                <div class="edu-school">
+                  <img class="school-logo" src="logos/suda.png" alt="苏州大学 logo" />
+                  <h3>苏州大学</h3>
+                </div>
                 <span class="muted">2019.09 - 2023.06</span>
               </div>
               <p class="muted">管理学（辅修心理学） 本科</p>
-              <p>GPA: 3.8/4.0（前10%）；核心课程：高等数学、线性代数、运筹学、统计学、微观经济学、宏观经济学等；荣誉：优秀毕业生、三好学生、学习优秀奖学金、精神文明奖学金等</p>
+              <div class="edu-details"><ul class="list edu-list"><li>GPA: 3.8/4.0（前10%）</li>
+<li>核心课程：高等数学、线性代数、运筹学、统计学、微观经济学、宏观经济学等</li>
+<li>荣誉：优秀毕业生、三好学生、学习优秀奖学金、精神文明奖学金等</li></ul></div>
             </article>
-    </section>
-
-    <section>
-      <h2>实习经历</h2>
-      <article class="exp">
-              <div class="row">
-                <h3>美团</h3>
-                <span class="muted">2025.04 - 至今</span>
-              </div>
-              <div class="row">
-                <p class="muted">M17 大模型评测团队 评测运营</p>
-                <span class="muted">北京</span>
-              </div>
-              <div class="exp-section">
+      </section>
+      <section class="section">
+        <h2 class="section-title">实习经历</h2>
+        <article class="exp collapsible" data-exp-id="exp-0">
+              <button type="button" class="exp-header" aria-expanded="false" aria-controls="exp-0-body" id="exp-0-btn">
+                <div class="exp-header-inner">
+                  <div class="row exp-title-row">
+                    <div class="exp-org">
+                      <img class="org-logo" src="https://www.google.com/s2/favicons?domain=meituan.com&amp;sz=128" alt="美团 logo" />
+                      <h3>美团</h3>
+                    </div>
+                    <span class="muted">2025.04 - 至今</span>
+                  </div>
+                  <div class="row">
+                    <p class="muted">M17 大模型评测团队 评测运营</p>
+                    <span class="muted">北京</span>
+                  </div>
+                </div>
+                <span class="toggle-icon" aria-hidden="true">▶</span>
+              </button>
+              <div class="exp-body" id="exp-0-body" hidden>
+                <div class="exp-section">
                   <h4>开放问题评测</h4>
                   <ul class="list">
                     <li>评测框架：「背景目标」针对传统主观评测中个人偏好噪声大、稳定性低的行业痛点，旨在构建一套剥离个人偏好、基于群体共识的自动化评测体系；「行动&amp;结果」聚焦指令遵循、安全性、真实性等高共识维度，将评价标准拆解为细粒度的原子化指标，设计并落地“准入判定-基准定档-缺陷降档”的三级分层聚合框架，替代传统模糊打分逻辑，最终产出高置信度的绝对分指标及模型对战榜单。</li>
@@ -248,17 +154,27 @@
 <li>主客观数据集建设：「背景目标」针对早期评测集建设流程模糊、人工依赖度高的问题，期望通过SOP优化提升数据生产的透明度与数据质量；「行动&amp;结果」基于类目体系开展数据分布对齐，制定高区分度与真实性标准；重构数据建设SOP，覆盖“挖掘-打标-质检-校验”全链路，并引入LLM-as-a-Judge实现自动化预标注与分流质检，显著提升数据生产人效；最终交付应用评测集V2.0，定向补充150+条复杂工具调用（Function Call）客观题与200+条垂类行业主观题。</li>
                   </ul>
                 </div>
+              </div>
             </article>
-<article class="exp">
-              <div class="row">
-                <h3>理想</h3>
-                <span class="muted">2024.11 - 2025.02</span>
-              </div>
-              <div class="row">
-                <p class="muted">COE（专家中心） 绩效AI产品</p>
-                <span class="muted">北京</span>
-              </div>
-              <div class="exp-section">
+<article class="exp collapsible" data-exp-id="exp-1">
+              <button type="button" class="exp-header" aria-expanded="false" aria-controls="exp-1-body" id="exp-1-btn">
+                <div class="exp-header-inner">
+                  <div class="row exp-title-row">
+                    <div class="exp-org">
+                      <img class="org-logo" src="https://www.google.com/s2/favicons?domain=lixiang.com&amp;sz=128" alt="理想 logo" />
+                      <h3>理想</h3>
+                    </div>
+                    <span class="muted">2024.11 - 2025.02</span>
+                  </div>
+                  <div class="row">
+                    <p class="muted">COE（专家中心） 绩效AI产品</p>
+                    <span class="muted">北京</span>
+                  </div>
+                </div>
+                <span class="toggle-icon" aria-hidden="true">▶</span>
+              </button>
+              <div class="exp-body" id="exp-1-body" hidden>
+                <div class="exp-section">
                   <h4>数据自动化</h4>
                   <ul class="list">
                     <li>「背景目标」针对绩效分析场景中数据源分散、重复劳动多的痛点，旨在重构数据处理流程，实现从清洗到可视化的全链路自动化分析，释放人力资源；「行动&amp;结果」基于Python构建端到端的数据处理Pipeline，打通飞书绩效与本地数据流，自动化完成清洗、50+核心指标逻辑运算及多维交叉验证，实现图表绘制与PPT报告的一键输出；将季度/年度分析周期由5天压缩至1天，显著降低人工操作误差。</li>
@@ -269,17 +185,27 @@
                     <li>「背景目标」解决销售人才画像模糊、成长路径难以量化的痛点，期望构建数据驱动的金牌专家识别体系与能力评估模型，推动人才全生命周期管理的闭环落地；「行动&amp;结果」处理千万级业务流水值数据，并引入LLM对非结构化文本数据进行语义打标，构建覆盖销售专家“过往履历/基础素质/业务绩效”的全生命周期200+高维特征库；利用统计、聚类构建专家画像，基于随机森林、XGBoost等训练金牌专家预测模型，正确率（ACC）达80%+，同时引入SHAP值进行模型可解释性分析，输出关键影响因子以指导业务管理；基于低代码平台在3个月内完成从算法原型到销售AI Talent前端产品的搭建与测试，实现了从模型预测到业务决策辅助的闭环交付；</li>
                   </ul>
                 </div>
+              </div>
             </article>
-<article class="exp">
-              <div class="row">
-                <h3>京东</h3>
-                <span class="muted">2024.05 - 2024.08</span>
-              </div>
-              <div class="row">
-                <p class="muted">COE（专家中心） 数据运营</p>
-                <span class="muted">北京</span>
-              </div>
-              <div class="exp-section">
+<article class="exp collapsible" data-exp-id="exp-2">
+              <button type="button" class="exp-header" aria-expanded="false" aria-controls="exp-2-body" id="exp-2-btn">
+                <div class="exp-header-inner">
+                  <div class="row exp-title-row">
+                    <div class="exp-org">
+                      <img class="org-logo" src="https://www.google.com/s2/favicons?domain=jd.com&amp;sz=128" alt="京东 logo" />
+                      <h3>京东</h3>
+                    </div>
+                    <span class="muted">2024.05 - 2024.08</span>
+                  </div>
+                  <div class="row">
+                    <p class="muted">COE（专家中心） 数据运营</p>
+                    <span class="muted">北京</span>
+                  </div>
+                </div>
+                <span class="toggle-icon" aria-hidden="true">▶</span>
+              </button>
+              <div class="exp-body" id="exp-2-body" hidden>
+                <div class="exp-section">
                   <h4>数据运营</h4>
                   <ul class="list">
                     <li>「背景目标」子集团招聘需求大、人力有限，需快速利用数据帮助招聘团队提效，但数据繁杂、口径不一；期望快速搭建招聘数据中台，助力团队优化招聘流程。「行动&amp;结果」梳理招聘全流程数据，撰写指标说明书（含招聘结果、效率、进度、质量、合规与体验五方面指标），统一计算口径，拉齐各方对数据的认知；同时，利用内部招聘看板系统、PS系统及Excel等搭建数据看板，实现周度、月度、季度的数据自动化更新，帮助招聘团队阶段性复盘与优化；此外，By多级业务部、招聘人员、岗位以及时间等维度进行深入分析，挖掘各指标卡点并优化，最终助力招聘团队达成Q3核心业务指标。</li>
@@ -291,32 +217,55 @@
 <li>横向项目：内部招聘看板系统4.0试点落地、内推渠道建设、面评流程规范、候选人面试体验优化、入职人员背景分析等。</li>
                   </ul>
                 </div>
+              </div>
             </article>
-    </section>
-
-    <section>
-      <h2>竞赛活动</h2>
-      <ul class="list">
-        <li>“正大杯”第十五届市场调查与分析大赛北京赛区（研究生组）一等奖（2025.01 - 2025.04）</li>
-<li>2024年“挑战杯”首都大学生创业计划竞赛北京市三等奖（2024.04 - 2024.05）</li>
-<li>第二届全国大学生数据统计与分析竞赛二等奖（2023.06）</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>个人技能</h2>
-      <ul class="list">
-        <li>Python</li>
-<li>Js</li>
-<li>Sql</li>
-<li>Chatbot</li>
-<li>Cursor等AI工具</li>
-<li>MS Office国家二级</li>
-<li>英语（CET-6）</li>
-      </ul>
-    </section>
-
-    <footer>Built with Python + GitHub Pages</footer>
-  </main>
+      </section>
+      <section class="section">
+        <h2 class="section-title">竞赛活动</h2>
+        <div class="awards-list"><article class="award"><div class="row"><span>“正大杯”第十五届市场调查与分析大赛北京赛区（研究生组）一等奖</span><span class="muted">2025.01 - 2025.04</span></div></article>
+<article class="award"><div class="row"><span>2024年“挑战杯”首都大学生创业计划竞赛北京市三等奖</span><span class="muted">2024.04 - 2024.05</span></div></article>
+<article class="award"><div class="row"><span>第二届全国大学生数据统计与分析竞赛二等奖</span><span class="muted">2023.06 - 2023.06</span></div></article></div>
+      </section>
+      <section class="section">
+        <h2 class="section-title">AI 使用</h2>
+        <p class="about-text" style="margin-bottom: 14px;">日常工作中深度使用 AI 工具提效，按场景分工、各取所长：</p>
+        <div class="ai-usage">
+          <div class="ai-item">
+            <span class="ai-label">日常</span>
+            <p><strong style="color: var(--text);">Gemini</strong> — 日常问答、资料检索、写作润色、思路梳理的首选，多模态与长上下文能力实用。</p>
+          </div>
+          <div class="ai-item">
+            <span class="ai-label">代码</span>
+            <p><strong style="color: var(--text);">Cursor</strong> — 写代码、调试、重构的主力工具，与 IDE 深度集成，补全与对话体验流畅。</p>
+          </div>
+          <div class="ai-item">
+            <span class="ai-label">音视频</span>
+            <p><strong style="color: var(--text);">Gemini、Seed</strong> — 音视频处理常用这两个模型，支持多模态理解与生成。</p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section-title">个人技能</h2>
+        <div class="skills-wrap"><span class="skill-tag">Python</span>
+<span class="skill-tag">JavaScript</span>
+<span class="skill-tag">SQL</span>
+<span class="skill-tag">Chatbot</span>
+<span class="skill-tag">Cursor 等 AI 工具</span>
+<span class="skill-tag">MS Office 国家二级</span>
+<span class="skill-tag">英语 CET-6</span></div>
+      </section>
+      <footer>Built with Python + GitHub Pages</footer>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll(".exp-header").forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        var body = document.getElementById(this.getAttribute("aria-controls"));
+        var expanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !expanded);
+        body.hidden = expanded;
+      });
+    });
+  </script>
 </body>
 </html>
